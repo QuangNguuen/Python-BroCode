@@ -1,17 +1,18 @@
-print("Enter your pressure in atm: ")
-pressure = float(input())
+count = 0
+total = 0
+line = input("Enter one integer (Blank to exit): ")
 
-print("  Convert table:   \n" + "1. Convert to kPa\n" + "2. Convert to PSI\n" + "3. Convert to mmHg")
-choice = int(input())
+while line != "":
+    num = float(line)
 
-if (choice == 1 ):
-    pressure = pressure * 101.352
-    print("The pressure is", pressure, "kPa")
-elif (choice == 2):
-    pressure = pressure * 14.6959
-    print("The pressure is", pressure, "PSI")
-elif (choice == 3):
-    pressure = pressure * 760
-    print("The pressure is", pressure, "mmHg")
+    count = count + 1
+    total = total + num
+
+    line = input("Enter one integer (Blank to exit): ")
+
+if count > 0:
+    print("The average is", total/count)
 else:
-    print("Invalid input. Run again")
+    print("Cannot to computed")
+
+    
